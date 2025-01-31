@@ -45,5 +45,5 @@ streamlit run dashboard.py
 - BeautifulSoup
 - TextBlob
 
-📎 📎 Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/helgg/)
+📎 Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/helgg/)
 
