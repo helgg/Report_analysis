@@ -2,7 +2,8 @@ from fastapi import FastAPI, Depends, Query
 from pydantic import BaseModel
 from typing import Optional
 from sqlalchemy.orm import Session
-from scraping import get_g1_headlines, get_uol_headlines, get_cnn_headlines, get_oeste_headlines
+from scraping import get_g1_headlines, get_us_headlines, get_uk_headlines, get_germany_headlines, get_france_headlines, get_japan_headlines
+
 from sentiment import analyze_sentiment
 from database import SessionLocal, init_db, save_news, get_stored_news, News
 
@@ -24,7 +25,15 @@ def get_db():
 
 @app.get("/news", summary="Coleta notícias dos portais, analisa o sentimento e salva no banco")
 def get_news(db: Session = Depends(get_db)):
-    news_sources = [get_g1_headlines, get_uol_headlines, get_cnn_headlines, get_oeste_headlines]
+    # todos os portais de notícias
+    news_sources = [
+        get_g1_headlines,
+        get_us_headlines,
+        get_uk_headlines,
+        get_germany_headlines,
+        get_france_headlines,
+        get_japan_headlines
+    ]
     all_news = []
     for source_func in news_sources:
         headlines = source_func()

@@ -37,7 +37,7 @@ streamlit run dashboard.py
 
 ## 📌 Requisitos
 
-- Python 3.x
+- Python
 - FastAPI
 - Uvicorn
 - Streamlit
@@ -45,5 +45,5 @@ streamlit run dashboard.py
 - BeautifulSoup
 - TextBlob
 
-📎 Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/helgg/)
+📎 Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/helder-gualdi-de-godoy/)
 

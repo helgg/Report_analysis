@@ -1,10 +1,10 @@
 import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 
-# Baixa o lexicon do VADER (se ainda não estiver baixado)
+# Baixa o lexicon do VADER
 nltk.download("vader_lexicon")
 
-# Inicializa o analisador
+# analisador
 sia = SentimentIntensityAnalyzer()
 
 def analyze_sentiment(text: str):
